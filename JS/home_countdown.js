@@ -1,4 +1,4 @@
-const url = 'https://api.spacexdata.com/v3/launches/';
+const url = 'https://api.spacexdata.com/v3/launches/upcoming';
 
 fetch(url)
 .then(function(resp) {
@@ -8,27 +8,13 @@ fetch(url)
     return launches(data);
 })
 
-let upcomingLaunch = [];
-let completedLaunch = [];
-let nextLaunch = [];
-
-function launches(data){
-   
-    for (let i = 0; i < data.length; i++) {
-        if(data[i].upcoming === true) {
-            upcomingLaunch.push(data[i]);
-        }
-    }
-    nextLaunch = upcomingLaunch[0];
-    upcomingLaunch.splice(0,1);
-
-    nextLaunchCountdown(nextLaunch.launch_date_unix);
+function launches(nextLaunch){
+    nextLaunchCountdown(nextLaunch[0].launch_date_unix);
 }
 
 function nextLaunchCountdown(data) {
     console.log(data)
-    let nextLaunchCountdown = "";
-    setInterval(function() {
+    setInterval(() => {
         let distance , weeks, days, hours, minutes, seconds;
         const now = Math.floor(new Date().getTime());
     

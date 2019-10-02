@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../IMAGES/238169477_Preview.jpeg");
+    background-image: url("../IMAGES/AdobeStock_238169477.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -32,7 +32,7 @@
     text-align: center;
     color: white;
     font-weight: thin;
-    font-size: 1.6rem;
+    font-size: 2em;
 }
 #s_landing_nav {
  position: absolute;
@@ -48,9 +48,6 @@
     font-size: 1.15rem;
 }
 
-#l_landing_nav {
-    display: none;
-}
 
 @media screen and (min-width: 768px ) {
     #landing_logo {
@@ -59,11 +56,23 @@
         left: 30px;
         width: 400px;
     }
+    #s_landing_nav > li {
+        padding: 0 15px;
+    }
     #s_landing_nav > li > a {
         font-size: 2rem;
     }
-
+    #qoute {
+        font-size: 5vh;
+    }
 }
+@media screen and (min-width: 1080px ) { 
+    #s_landing_nav {
+        top: 30px;
+        right: 30px;
+       }
+}
+
 /* Landing region end*/
 
 
@@ -98,17 +107,13 @@
     margin: 0 auto;
     width: 90%;
     margin-bottom: 25px;
+    table-layout: fixed;
 }
+
 tr.nums th {
     font-size: 1.8rem;
 }
-#launch_data {
-    width: auto;
-    margin: 0 25px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
+
 .dataitem {
     margin-right: 15px;
 }
@@ -124,7 +129,7 @@ tr.nums th {
 #image_launch {
     height: 100%;
     width: 100%;
-    background-image: url("../IMAGES/130479437_Preview.jpeg");
+    background-image: url("../IMAGES/AdobeStock_130479437.jpeg");
     background-size: cover;
     background-position: left;
     transform: scale(1.2);
@@ -138,18 +143,15 @@ tr.nums th {
     width: 200px;
     margin: auto 0;
     align-self: center;
-    cursor: pointer;
-}
-.cta:hover {
-    transform: scale(1.5);
 }
 
 @media screen and (min-width: 768px ) {
     #launch {
-        height: 40vh;
+        height: 50vh;
         flex-direction: row-reverse;
-        background-image:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9136029411764706) 44%, rgba(255,255,255,1) 100%), url("../IMAGES/130479437_Preview.jpeg");
-        background-position: right 5px top;
+        background-image:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9136029411764706) 44%, rgba(255,255,255,1) 100%), url("../IMAGES/AdobeStock_130479437.jpeg");
+        background-size: cover;
+        background-position:  /* 0px from the right */ 50%; /* 10% from the bottom */ 
         position: relative;
     }
     .fadeToWhite {
@@ -162,11 +164,33 @@ tr.nums th {
     #launch_content {
         height: auto;
     }
-    #launch_data {
-        margin-bottom: 40px;
+    tr.nums th {
+        padding: 0 20px;
     }
 }
-
+@media screen and (min-width: 1080px ) { 
+    #launch {
+        height: 80vh;
+    }
+    #launch_content {
+        margin-right: 20px;
+        width: 45%;
+    }
+    #launch_content h1 {
+        font-size: 4vw;
+    }
+    tr.nums th {
+        font-size: 5vw;
+    }
+    .CTA {
+        cursor: pointer;
+        margin-top: 50px;
+        padding: 40px; 
+        font-size: 1.2em;
+        font-weight: bolder;
+        border: 4px solid #07578B;
+    }
+}
    
 /* launch region end */
 
@@ -189,31 +213,59 @@ tr.nums th {
     margin: 0 25px;
     margin-bottom: 5px;
 }
-.lefted_title h2 {
-    font-size: 1.1rem;
+.lefted_title h1 {
+    font-size: 1.2rem;
 }
 #contact_content p {
     width: auto;
     margin: 0 25px;
 }
+#contact_content p:last-child {
+    margin-top: 75px;
+    text-align: center;
+}
 #image_contact {
     height: 100%;
     width: 100%;
-    background-image: url("../IMAGES/232453667_Preview.jpeg");
+    background-image: url("../IMAGES/AdobeStock_232453667.jpeg");
     background-size: cover;
     background-position: right;
 }
 
+
+
 @media screen and (min-width: 768px ) {
  #contact {
-    height: 40vh;
+    height: 50vh;
     flex-direction: row;
-    background-image:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9136029411764706) 46%, rgba(255,255,255,0) 100%), url("../IMAGES/232453667_Preview.jpeg");
+    background-image:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9136029411764706) 46%, rgba(255,255,255,0) 100%), url("../IMAGES/AdobeStock_232453667.jpeg");
     background-position: right 5px top;
     position: relative;
  }
- #image_contact {
-     background-image: none;
+
+ #contact_content p {
+     margin-bottom: 40px;
  }
+ #image_contact {
+    background-image: none;
+}
+}
+
+
+@media screen and (min-width: 1080px ) {
+ #contact {
+    height: 80vh;
+    background-size: cover;
+ }
+ #contact_content {
+    width: 50%;
+ }
+ #image_contact {
+     width: 50%;
+     background-image: none !important;
+ }
+ .lefted_title h1 {
+    font-size: 2vw;
+}
 }
 /* Contact region end */

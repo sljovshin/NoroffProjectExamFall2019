@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/contact.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/sidemenu.css">
@@ -12,8 +14,14 @@
 <body>
     <head>
         <div id="mobile_menu">
-            <img id="menu_logo" src="../IMAGES/spacex.svg" alt="spaceX logo">
+            <img id="menu_logo" src="../IMAGES/spacex.svg" alt="spaceX logo" onclick="location.href='../index.html'">
             <img id="menuburger" src="../IMAGES/oMenu.svg">
+            <nav id="header_nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="launch.html">Launch</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#"><u>Contact</u></a></li>
+            </nav>
         </div>
     </head>
     <main>
@@ -43,34 +51,37 @@
     </section>
     <!-- #endregion -->
     <footer>
-        <section id="l_m_logos">
-
-        </section>
-        <section id="footer_content">
-            <h3>Dont miss out on anything!</h3>
-            <h3>Join our NEWSLETTER</h3>
-            <form id="newsletter_sub" method="post">
-                <input type="text" placeholder="e-mail">
-                <input type="submit" value="JOIN" onclick="event.preventDefault()">
-            </form>
-            <h4>And follow us on social media</h4>
-            <div id="SoMe_icons">
-                <img src="/IMAGES/instagram-2-1.svg" alt="">
-                <img src="/IMAGES/facebook-3.svg" alt="">
-                <img src="/IMAGES/twitter.svg" alt="">
+            <div id="footer_container">
+                <section id="footer_content">
+                    <h3>Dont miss out on anything!</h3>
+                    <h3>Join our NEWSLETTER</h3>
+                    <form id="newsletter_sub" method="post">
+                        <input type="text" placeholder="e-mail">
+                        <input type="submit" value="JOIN" onclick="event.preventDefault()">
+                    </form>
+                    <h4>And follow us on social media</h4>
+                    <div id="SoMe_icons">
+                        <img src="../IMAGES/socialmedia/instagram-2-1.svg" alt="instagram link" onclick="location.href='https://www.instagram.com/spacex/?hl=nb'">
+                        <img src="../IMAGES/socialmedia/facebook-3.svg" alt="facebook link" onclick="location.href='https://www.facebook.com/SpaceX-226435907904104/'">
+                        <img src="../IMAGES/socialmedia/twitter.svg" alt="twitter link" onclick="location.href='https://twitter.com/spacex'">
+                    </div>
+                </section>
+                <section id="s_logos">
+                    <img src="/IMAGES/spaceXfooterLogo.svg" alt="SpaceX Logo">
+                    <img src="/IMAGES/nasa-6.svg" alt="Nasa Logo">
+                </section>
             </div>
-        </section>
-        <section id="s_logos">
-            <img src="/IMAGES/spaceXfooterLogo.svg" alt="SpaceX Logo">
-            <img src="/IMAGES/nasa-6.svg" alt="Nasa Logo">
-        </section>
-        <p id="project">Project Exam</p>
-        <div id="createdBy">
-            <p>Created by</p>
-            <p>Sondre Ljovshin</p>
-        </div>
-        <p id="org">Noroff FEU</p>
-    </footer>
+            <div id="sign">
+                <div id="sign_cont">
+                    <p id="project">Project Exam</p>
+                    <div id="createdBy">
+                        <p>Created by</p>
+                        <p>Sondre Ljovshin</p>
+                    </div>
+                    <p id="org">Noroff FEU</p>
+                </div>
+            </div>
+        </footer>
     <script src="../JS/menu.js"></script>
     <script src="../JS/contact.js"></script>
 </body>

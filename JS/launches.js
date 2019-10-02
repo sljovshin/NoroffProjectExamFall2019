@@ -107,8 +107,17 @@ function populateCompletedLaunch(data) {
                                     `<div class="panelContent">`+
                                     `<div class="launchdata">`+
                                     `<p><strong>Rocket:</strong> ${data[i].rocket.rocket_name} </p>`+
-                                    `<p><strong>Launch site:</strong> ${data[i].launch_site.site_name}</p>`+
-                                    `<p><strong>Details:</strong></p>`;
+                                    `<p><strong>Launch site:</strong> ${data[i].launch_site.site_name}</p>` +
+                                    `<p><strong>Video:</strong></p>`;
+        if (!data[i].links.video_link) {
+            completedLaunchContent += `<p>There was no video stream for this launch</p>`;
+        }
+        else {
+            completedLaunchContent += `<iframe width="100%" height="400px" src="https://www.youtube.com/embed/${data[i].links.youtube_id}"></iframe>`
+        }
+                                    
+
+        completedLaunchContent +=   `<p><strong>Details:</strong></p>`;
         if(!data[i].details) {
             completedLaunchContent += `<p> There are no details for this mission!</p>`;
         }
@@ -122,14 +131,8 @@ function populateCompletedLaunch(data) {
     document.getElementById('completed_launch_panel').innerHTML = completedLaunchContent;
 }
 
-function getDecimal(x) {
-    return decimal = x - Math.floor(x)
-}
-
 
 function nextLaunchCountdown(data) {
-console.log(data)
-let nextLaunchCountdown = "";
 setInterval(function() {
     let distance , weeks, days, hours, minutes, seconds;
     const now = Math.floor(new Date().getTime());

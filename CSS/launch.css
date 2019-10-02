@@ -76,7 +76,7 @@ main {
   
   
   .toggle:checked + .title + .panelContent {
-    max-height: 500px;
+    max-height: 100%;
   }
   .toggle:checked + .title:before {
     transform: rotate(90deg) !important;
@@ -94,7 +94,26 @@ main {
     margin: 0 auto;
     width: 90%;
     margin-bottom: 25px;
+    table-layout: fixed;
 }
 tr.nums th {
     font-size: 1.8rem;
 }
+
+@media screen and (min-width: 876px ) {
+  main {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .l_sec {
+    max-width: 30%;
+    height: 80%;
+    margin: 10px;
+  }
+  .l_sec p {
+  font-size: 1.2em;
+  }
+ }
+

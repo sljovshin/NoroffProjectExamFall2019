@@ -34,6 +34,7 @@ function launches(data){
     
 }
 
+
 function convertDate(launchDate) {
     let date = new Date(launchDate*1000);  
     return date.toLocaleDateString();
@@ -102,22 +103,15 @@ function populateCompletedLaunch(data) {
     let completedLaunchContent= "";
     for (let i = 0; i < data.length; i++) {
         completedLaunchContent +=   `<div class="panelItems">`+
-                                    `<input type="checkbox" id="ul_toggle100${i}" class="toggle" />`+
+                                    `<input type="checkbox" id="ul_toggle100${i}" class="toggle" onclick="showVideo(${i});" />`+
                                     `<label class="title" for="ul_toggle100${i}"><strong>${data[i].mission_name.substring(0, 20)}</strong> - ${convertDate(data[i].launch_date_unix)}</label>`+
                                     `<div class="panelContent">`+
                                     `<div class="launchdata">`+
                                     `<p><strong>Rocket:</strong> ${data[i].rocket.rocket_name} </p>`+
                                     `<p><strong>Launch site:</strong> ${data[i].launch_site.site_name}</p>` +
-                                    `<p><strong>Video:</strong></p>`;
-        if (!data[i].links.video_link) {
-            completedLaunchContent += `<p>There was no video stream for this launch</p>`;
-        }
-        else {
-            completedLaunchContent += `<iframe width="100%" height="400px" src="https://www.youtube.com/embed/${data[i].links.youtube_id}"></iframe>`
-        }
-                                    
-
-        completedLaunchContent +=   `<p><strong>Details:</strong></p>`;
+                                    `<p><strong>Video:</strong></p>`+                    
+                                    `<div id="video${i}"></div>` +
+                                    `<p><strong>Details:</strong></p>`;
         if(!data[i].details) {
             completedLaunchContent += `<p> There are no details for this mission!</p>`;
         }
@@ -158,27 +152,11 @@ setInterval(function() {
 
 }
 
-
-
-
-/**
-  
-    milliseconds = data - now;
-    weeks = Math.floor(milliseconds / 604800);
-    decimal = (milliseconds / 604800)-Math.floor(weeks);
-    
-    days = decimal*7;
-    decimal = getDecimal(days);
-    days = Math.round(days);
-    
-    hours = decimal*24;
-    decimal = getDecimal(hours);
-    hours = Math.round(hours)
-    
-    minutes = decimal*60;
-    decimal = getDecimal(minutes);
-    minutes = Math.round(minutes);
-
-    seconds = Math.round(decimal*60);
-
- */
+function showVideo(id) {
+    if (!completedLaunch[id].links.video_link) {
+        document.getElementById(`video${id}`).innerHTML = `<p>There was no video stream for this launch</p>`;
+    }
+    else {
+        document.getElementById(`video${id}`).innerHTML =  `<iframe width="100%" height="400px" src="https://www.youtube.com/embed/${completedLaunch[id].links.youtube_id}"></iframe>`
+    }
+}

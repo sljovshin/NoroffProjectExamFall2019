@@ -14,8 +14,8 @@
 <body>
     <head>
         <div id="mobile_menu">
-            <img id="menu_logo" src="../IMAGES/spacex.svg" alt="spaceX logo" onclick="location.href='../index.html'">
-            <img id="menuburger" src="../IMAGES/oMenu.svg">
+            <img id="menu_logo" src="../IMAGES/logos/spacex.svg" alt="spaceX logo" onclick="location.href='../index.html'">
+            <img id="menuburger" src="../IMAGES/header/oMenu.svg">
             <nav id="header_nav">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="launch.html">Launch</a></li>
@@ -30,13 +30,31 @@
                 <h1>GOT QUESTIONS FOR US?<hr></h1>
                 <P>Curabitur pharetra tellus dictum, suscipit est et, urna. Sed ac hendrerit tellus.</P>
             </section>
-            <section>
+            <section id="bottom">
+                <img src="../IMAGES/contact/AdobeStock_216424559.jpeg" alt="">
                 <form id="contact" action="" method="post">
                     <input id="email" type="email" name="eMail" id="e-mail" placeholder="E-mail">
                     <input id="subject" type="text" name="subject" id="subject" placeholder="Subject">
                     <textarea id="message" name="message" placeholder="Message"></textarea>
-                    <input id="submitContact" type="submit" value="SEND">
+                    <div id="buttons">
+                        <div>
+                            <label id="attach" for="file-upload" class="custom-file-upload">
+                                <input id="file-upload" type="file" multiple/>
+                                Attachments
+                            </label>
+                            <div id="file-upload-filename"></div>
+                        </div>
+                        <input id="submitContact" type="submit" value="SEND">
+                    </div>
                 </form>
+            </section>
+            <section>
+                <div id="hireing">
+                    <h3>Newly educated?</h3>
+                    <hr>
+                </div>
+                <p>Tell us about your self and attach a short essay and your CV!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo maxime placeat earum repellat, eos sequi voluptate sunt distinctio explicabo! Vitae.</p>
             </section>
         </div>
     </main>
@@ -44,9 +62,9 @@
     <section id="menu_panel">
         <nav>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#"><u>Launch</u></a></li>
+            <li><a href="launch.html"><u>Launch</u></a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Contact</a></li>
         </nav>
     </section>
     <!-- #endregion -->
@@ -61,14 +79,14 @@
                     </form>
                     <h4>And follow us on social media</h4>
                     <div id="SoMe_icons">
-                        <img src="../IMAGES/socialmedia/instagram-2-1.svg" alt="instagram link" onclick="location.href='https://www.instagram.com/spacex/?hl=nb'">
-                        <img src="../IMAGES/socialmedia/facebook-3.svg" alt="facebook link" onclick="location.href='https://www.facebook.com/SpaceX-226435907904104/'">
-                        <img src="../IMAGES/socialmedia/twitter.svg" alt="twitter link" onclick="location.href='https://twitter.com/spacex'">
+                        <img src="/IMAGES/socialmedia/instagram.svg" alt="instagram link" onclick="window.open('https://www.instagram.com/spacex/?hl=nb', '_blank')">
+                        <img src="/IMAGES/socialmedia/facebook.svg" alt="facebook link" onclick="window.open('https://www.facebook.com/SpaceX-226435907904104/', '_blank')">
+                        <img src="/IMAGES/socialmedia/twitter.svg" alt="twitter link" onclick="window.open('https://twitter.com/spacex', '_blank')">
                     </div>
                 </section>
                 <section id="s_logos">
-                    <img src="/IMAGES/spaceXfooterLogo.svg" alt="SpaceX Logo">
-                    <img src="/IMAGES/nasa-6.svg" alt="Nasa Logo">
+                    <img src="/IMAGES/logos/spaceXfooterLogo.svg" alt="SpaceX Logo">
+                    <img src="/IMAGES/logos/nasa.svg" alt="Nasa Logo">
                 </section>
             </div>
             <div id="sign">

@@ -43,3 +43,17 @@ let validator = {
       return emailResult = this.emailpattern.test(email.value);
     }
   }
+
+let input = document.getElementById( 'file-upload' );
+let infoArea = document.getElementById( 'file-upload-filename' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  let input = event.srcElement;
+  let fileList = "Files:";
+  for (let i = 0; i < input.files.length; i++) {
+    fileList += `<p>${input.files[i].name}</p>`
+  }
+  infoArea.innerHTML = fileList;
+}

@@ -5,7 +5,7 @@
 }
 main {
     background-color: #07578B;
-    padding: 45px 14px 0px 14px;
+    padding: 65px 3vw 0px 3vw;
     height: 100vh;
 }
 #section_container {
@@ -13,6 +13,7 @@ main {
     height: 100%;
     background-color: #E8E8E8;
     padding-top: 25px;
+    margin-bottom: 10px;
 }
 h1 {
     font-size: 1.3em;
@@ -39,6 +40,22 @@ h1 {
     width: calc(100% - 30px);
     padding: 15px;
 }
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#attach {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    width: 130px;
+    height: 40px;
+    margin-top: 6.5px;
+    background-color: #005288;
+    color: white;
+    cursor: pointer;
+}
 
 #contact input[type="submit"] {
     width: 80px;
@@ -48,6 +65,58 @@ h1 {
     color: white;
     cursor: pointer;
     text-indent: 0px;
-    align-self: flex-end;
+}
+#contact input[type="file"] {
+    display: none;
+}
+#bottom img {
+    display: none;
+}
+#hireing {
+    width: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1016px) { 
+    #section_container {
+        height: 90%;
+    }
+    #section_container > section:first-child {
+        margin-top: 25px;
+        width: 45%;
+    }
+    #contact {
+        margin-top: 0;
+        width: 400px;
+    }
+    #bottom {
+        width: auto !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 50px;
+    }
+
+    #bottom img {
+        display: block;
+        margin-top: 5px;
+        max-width: 90%;
+        width: auto;
+        margin-right: auto;
+        margin-left: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #bottom form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    #contact textarea {
+        min-height: 260px;
+        height: auto;
+    }
+    #hireing {
+        width: 20vw;
+    }
 }
 

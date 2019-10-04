@@ -7,7 +7,7 @@ body {
     background-color: #07578B;
 }
 main {
-    padding: 45px 14px 0px 14px;
+    padding: 65px 3vw 0px 3vw;
     height: auto;
 }
 .sec {
@@ -71,10 +71,20 @@ li {
     display: none;
 }
 
+#credit {
+    color: #000;
+}
+#creditStrong{
+    color: #07578B;
+}
+#map {
+    width: 100%;
+    padding-top: 40%;
+    margin: 30px auto;
+    background-color: grey;
+  }
+
 @media screen and (min-width: 605px) { 
-    main {
-       padding: 45px 5vw 0px 5vw;
-    }
     #top > div:first-child {
         padding: 0 22vw;
     }
@@ -92,6 +102,8 @@ li {
 
     #bottom {
         padding: 0 5vw;
+    }
+    #fasilities_container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -113,7 +125,7 @@ li {
     }
 }
 
-@media screen and (min-width: 1016 px) { 
+@media screen and (min-width: 1016px) { 
     .fasilities {
         margin-bottom: 60px !important;
     }

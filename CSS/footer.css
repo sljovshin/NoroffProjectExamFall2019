@@ -1,8 +1,8 @@
 footer {
-    height: calc(100vh - 46px);
+    height: auto;
     padding: 46px 10px 0 10px;
     background-color: #E8E8E8;
-    background-image: url('/IMAGES/background.svg');
+    background-image: url('/IMAGES/backgrounds/background.svg');
     background-size: cover;
     position: relative;
 }
@@ -60,6 +60,7 @@ footer {
     min-width: 100px;
     width: 50vw;
     margin: 0 auto;
+    margin-bottom: 200px;
 }
 footer p {
     color: white;

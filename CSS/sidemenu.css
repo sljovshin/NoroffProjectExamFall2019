@@ -28,7 +28,7 @@
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #07578B;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -42,7 +42,7 @@
   #menu_panel nav li a {
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #fff;
   }
   #header_nav {
     display: none;

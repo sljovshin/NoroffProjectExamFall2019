@@ -1,5 +1,4 @@
-const url = 'https://api.spacexdata.com/v3/launches/';
-
+const url = "https://api.spacexdata.com/v3/launches";
 fetch(url)
 .then(function(resp) {
     return resp.json();    

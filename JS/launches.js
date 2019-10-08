@@ -29,7 +29,7 @@ function launches(data){
     populateNextLaunch(nextLaunch);
     nextLaunchCountdown(nextLaunch.launch_date_unix);
     populateUpcomingLaunch(upcomingLaunch);
-    populateCompletedLaunch(completedLaunch);
+    populateCompletedLaunch(completedLaunch.reverse());
     
 }
 

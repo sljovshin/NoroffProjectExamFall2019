@@ -5,14 +5,13 @@
 }
 main {
     background-color: #07578B;
-    padding: 65px 3vw 0px 3vw;
-    height: 100vh;
+    padding: 65px 3vw 1vh 3vw;
+    min-height: 100vh;
 }
 #section_container {
-    padding: 0px 14px;
-    height: 100%;
+    padding: 25px 14px;
+    height: auto;
     background-color: #E8E8E8;
-    padding-top: 25px;
     margin-bottom: 10px;
 }
 h1 {

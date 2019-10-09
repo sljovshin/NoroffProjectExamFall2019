@@ -22,17 +22,18 @@ footer {
     width: auto;
     margin: 15px 0;
 }
-#newsletter_sub input[type="text"] {
+#newsletter_sub input[type="email"] {
     width: auto;
-    height: 35px;
+    height: 40px;
     border: none;
     background-color: rgba(255, 255, 255, 0.9);
     text-indent: 10px;
     font-size: 1rem;
 }
-#newsletter_sub input[type="submit"] {
+#newsletter_sub input[type="button"] {
     width: 70px;
-    height: 35px;
+    height: 40px;
+    padding: 0;
     border: none;
     background-color: #3878A2;
     color: white;

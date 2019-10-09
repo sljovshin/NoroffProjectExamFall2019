@@ -18,18 +18,18 @@ function launches(data){
             upcomingLaunch.push(data[i]);
         }
         else {
-            completedLaunch.push(data[i]);
+            completedLaunch.unshift(data[i]);
         }
     }
 
     nextLaunch = upcomingLaunch[0];
-    upcomingLaunch.splice(0,1);
+    upcomingLaunch.shift();
 
 
     populateNextLaunch(nextLaunch);
     nextLaunchCountdown(nextLaunch.launch_date_unix);
     populateUpcomingLaunch(upcomingLaunch);
-    populateCompletedLaunch(completedLaunch.reverse());
+    populateCompletedLaunch(completedLaunch);
     
 }
 

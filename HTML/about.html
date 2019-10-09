@@ -98,9 +98,9 @@
                     <h3 id="ftitle">Dont miss out on anything!</h3>
                     <h3>Join our NEWSLETTER</h3>
                     <form id="newsletter_sub" method="post">
-                        <input type="text" placeholder="e-mail">
-                        <input type="submit" value="JOIN" onclick="event.preventDefault()">
-                    </form>
+                        <input id="emailNewsLetter"type="email" placeholder="e-mail">
+                        <input id="submitNewsLetter" type="button" value="JOIN" onclick="subscribe()">
+                    </form>>
                     <h4>And follow us on social media</h4>
                     <div id="SoMe_icons">
                         <img src="/IMAGES/socialmedia/instagram.svg" alt="instagram link" onclick="window.open('https://www.instagram.com/spacex/?hl=nb', '_blank')">
@@ -126,6 +126,7 @@
         </footer>
     <script src="../JS/menu.js"></script>
     <script src="../JS/about.js"></script>
+    <script src="../JS/footer.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo9zxN5hq-py2Tbd15jus0RsCdRby2woc&callback=initMap">
     </script>

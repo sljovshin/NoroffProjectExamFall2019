@@ -10,6 +10,8 @@ function subscribe() {
 
     if(emailpattern.test(email.value) === false) {
         email.style.backgroundColor = "rgba(253, 114, 114, 0.6)"
+        email.value ="";
+        email.placeholder = "Thats not an e-mail"
     } else {
         newsletter_sub.innerHTML = `<p style="font-size:1.5em;color:#0F3A97">Wonderful! You are have subscribed<p>`;
         let waiting = setInterval(()=> {

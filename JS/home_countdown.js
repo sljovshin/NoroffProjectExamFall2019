@@ -9,7 +9,7 @@ fetch(url)
 })
 
 function launches(nextLaunch){
-    nextLaunchCountdown(nextLaunch[0].launch_date_unix);
+    nextLaunchCountdown(nextLaunch[0]);
 }
 
 function nextLaunchCountdown(data) {
@@ -18,7 +18,7 @@ function nextLaunchCountdown(data) {
         let distance , weeks, days, hours, minutes, seconds;
         const now = Math.floor(new Date().getTime());
     
-        distance = data*1000 - now;
+        distance = data.launch_date_unix*1000 - now;
         weeks = Math.floor(distance / 604800000);
         days = Math.floor(distance / (1000 * 60 * 60 * 24)/7);
         hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -31,6 +31,10 @@ function nextLaunchCountdown(data) {
             document.getElementById('hours').innerHTML = hours;
             document.getElementById('minutes').innerHTML = minutes;
             document.getElementById('seconds').innerHTML = seconds;   
+        }  else if (data.tbd === true) {
+            document.getElementById('countdown').innerHTML = "<h3>Launch is delayed</h3>" +
+                                                             "<h3>New time and date is to be determined</h3>" +
+                                                             "<br/>" ;
         } else {
             document.getElementById('countdown').innerHTML = "<h3>Launch in progress</h3>";
         }

@@ -7,6 +7,9 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+p {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
 /* Landing region start*/
 #landing {
     height: 100vh;

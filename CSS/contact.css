@@ -27,8 +27,13 @@ h1 {
     flex-direction: column;
 }
 
+#sentMessage {
+    align-self: center;
+    text-align: center;
+}
+
 #contact input, textarea {
-    margin: 7px 0;
+    margin: 3px 0 7px 0;
 }
 
 #contact input {
